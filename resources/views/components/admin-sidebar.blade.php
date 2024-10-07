@@ -82,6 +82,14 @@
     <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Social</h1>
     <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Social</h1>
 </div>
+@auth
+       {{-- <span class="text-blue-600 dark:text-blue-400 font-semibold">{{ Auth::user()->name }}</span> --}}
+        <form action="{{ route('logout')}}" method="POST">
+          @csrf 
+          
+          <a href="{{ route('login') }}" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+        </form>
+       @endauth
 </div>
 
 

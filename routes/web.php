@@ -12,16 +12,21 @@ Route::get('/index', function () {
     return view('index');
 });
 
-Route::middleware('auth')->group(function(){
+Route::middleware('admin')->group(function(){
     Route::get('admin.index', function() {
         return view('admin.index');
     });
     // Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
+// Route::middleware('guest')->group(function (){
+
+// });
+
 Route::get('/register', [RegisterUserController::class, 'register'])->name('register');
 Route::post('/register', [RegisterUserController::class, 'store'])->name('register.store');
-Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
+Route::Post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('staffs.application', function(){
     return view('staffs.application');
