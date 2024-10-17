@@ -17,7 +17,7 @@ class AdminUserSeeder extends Seeder
     {
         if(!User::where('email', 'admin@gmail.com')->exists()) {
             User::factory()->create([
-                'first_name' => 'Admin',
+            'first_name' => 'Admin',
             'last_name' => 'User',
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
