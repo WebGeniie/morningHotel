@@ -38,6 +38,10 @@
                     <label for="">Size</label>
                     <input type="text" name="size" value="{{ old('size', $room->size) }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                 </div>
+                <div class="text-sm text-slate-600 justify-center mt-2">
+                    <label for="">Capacity</label>
+                    <input type="text" name="capacity" value="{{ old('size', $room->capacity) }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                </div>
 
                 <!-- Description -->
                 <div class="text-sm text-slate-600 col-span-3 w-4/6 h-40 items-center mt-4">

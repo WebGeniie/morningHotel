@@ -15,10 +15,11 @@ class Room extends Model
         'size',
         'thumbnail',
         'status',
+        'capacity'
     ];
 
-    public function booking()
+    public function bookings()
     {
-        return $this->belongsTo(Booking::class);
+        return $this->belongsToMany(Booking::class, 'booking_room');
     }
 }

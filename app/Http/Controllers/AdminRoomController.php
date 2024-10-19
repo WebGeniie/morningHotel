@@ -23,6 +23,7 @@ class AdminRoomController extends Controller
                 'name' => 'required|string',
                 'thumbnail' => 'required',
                 'size' => 'required',
+                'capacity' => 'required',
                 'status' => 'required',
                 'description' => 'required',
             ]);
@@ -35,7 +36,8 @@ class AdminRoomController extends Controller
             Room::create([
                 'name' =>$request->name,
                 'thumbnail' => $imageName,
-                'size' => $request->size,
+                'size' => $request->size, 
+                'capacity' => $request->capacity, 
                 'status' => $request->status,
                 'description' => $request->description
             ]);
@@ -53,14 +55,16 @@ class AdminRoomController extends Controller
                 'name' => 'required|string',
                 'thumbnail' => 'nullable|image',  // Make this nullable
                 'size' => 'required|string',
+                'capacity' => 'required|string',
                 'status' => 'required|string',
                 'description' => 'required|string',
             ]);
         
-            // Update the room name, size, status, and description
+            // Update the room name, size, status, capacity, and description
             $room->name = $validated['name'];
             $room->size = $validated['size'];
             $room->status = $validated['status'];
+            $room->capacity = $validated['capacity'];
             $room->description = $validated['description'];
         
             // Handle thumbnail upload if a new file is provided

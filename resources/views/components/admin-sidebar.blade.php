@@ -59,7 +59,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
         </svg>
         <div class="flex justify-between w-full items-center">
-            <span class="text-[15px] ml-4 text-gray-200">Users</span>
+            <span class="text-[15px] ml-4 text-gray-200">Bookings</span>
             <span class="text-sm rotate-180" id="arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
@@ -71,29 +71,12 @@
 
     <!-- Submenu -->
     <div class="text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-200 hidden" id="submenu">
-        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Social</h1>
-        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Social</h1>
-        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Social</h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1"><a href="/admin/bookings/index">All Bookings</a></h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Checked In</h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Checked Out</h1>
+        {{-- <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Check In</h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Check Out</h1> --}}
     </div>
-    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 bg-gray-700 text-white" onclick="toggleDropdown1()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
-        </svg>
-        <div class="flex justify-between w-full items-center">
-            <span class="text-[15px] ml-4 text-gray-200">Bookings</span>
-            <span class="text-sm rotate-180" id="arrow-two">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-                </svg>                                      
-            </span>
-        </div> 
-    </div>
-    <!-- Submenu -->
-<div class="text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-200 hidden" id="submenu2">
-    <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Social</h1>
-    <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Social</h1>
-    <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Social</h1>
-</div>
 @auth
        {{-- <span class="text-blue-600 dark:text-blue-400 font-semibold">{{ Auth::user()->name }}</span> --}}
         <form action="{{ route('logout')}}" method="POST">

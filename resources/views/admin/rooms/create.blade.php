@@ -9,20 +9,25 @@
                     <label for="">Name of the Room</label>
                     <input type="text" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-                <div class="text-sm text-slate-600 content-start space-x-4">
-                    <label for="" class="pl-6">Choose Image</label>
-                    <input type="file" name="thumbnail" class="text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                </div>
-                <div class="text-sm text-slate-600 justify-center lg:grid-cols-4 gap-y-8 md:grid-cols-1">
+                <div class="text-sm text-slate-600 justify-center lg:grid-cols-4 gap-y-8 md:grid-cols-1 pl-6">
                     <label for="">Current Status</label>
                     <select name="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="">
                         <option value="Available">Available</option>
                         <option value="Unavailable">Unavailable</option>
                     </select>
                 </div>
+                <div class="text-sm text-slate-600 content-start space-x-4">
+                    <label for="" class="pl-6">Choose Image</label>
+                    <input type="file" name="thumbnail" class="text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+                
                 <div class="text-sm text-slate-600 justify-center mt-10">
                     <label for="" >Size</label>
                     <input type="text" name="size" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+                <div class="text-sm text-slate-600 justify-center mt-10">
+                    <label for="" >Capacity</label>
+                    <input type="text" name="capacity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
                 <div class="text-sm text-slate-600 col-span-3 w-4/6 h-40 items-center">
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>

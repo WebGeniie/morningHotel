@@ -23,6 +23,9 @@
                     SIZE
                 </th>
                 <th scope="col" class="px-4 py-3">
+                    CAPACITY
+                </th>
+                <th scope="col" class="px-4 py-3">
                     DESCRIPTION
                 </th>
                 <th scope="col" class="px-4 py-3">
@@ -51,6 +54,9 @@
                 </td>
                 <td class="px-4 py-4">
                     {{ $room->size}}
+                </td>
+                <td class="px-4 py-4">
+                    {{ $room->capacity}}
                 </td>
                 <td class="px-4 py-4">
                     {{ Str::limit($room->description, 50) }} <!-- Correct truncation -->

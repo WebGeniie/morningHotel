@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('size');
             $table->string('thumbnail');
+            $table->string('capacity');
             $table->string('status')->default('Available');
             $table->foreignId('booking_id')->nullable()->constrained()->onDelete('cascade');
             $table->timestamps();
