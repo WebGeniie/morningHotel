@@ -18,7 +18,8 @@ class RegisterUserController extends Controller
             'last_name' => 'required|string|max:10',
             'email' => 'required|email|unique:users',
             'password' => 'required|confirmed|string|min:8',
-            'phone_number' => 'required|min:9|max:16',
+            'phone_number' => 'required|min:9|max:20',
+            'role_id' => 'nullable|exists:roles,id', // Allow role_id to be nullable
         ]);
 
         $user = User::create([
@@ -27,7 +28,6 @@ class RegisterUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'phone_number' => $request->phone_number,
-            'role_id' => 3, // Assign default role ID
         ]);
         return to_route('staffs.application')->with('message', 'Your Application has been submitted and is under review.');
     }

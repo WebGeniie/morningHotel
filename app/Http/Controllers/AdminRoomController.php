@@ -96,4 +96,6 @@ class AdminRoomController extends Controller
         $room->delete();
         return to_route('admin.rooms.index');
         }
+
+        
 }

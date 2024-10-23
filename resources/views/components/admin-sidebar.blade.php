@@ -26,12 +26,44 @@
           </svg>              
           <input type="text" class="text-[15px] ml-4 w-full bg-transparent focus:outline-none">              
     </div>
-    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 bg-gray-700 text-white">
+    <a href="{{ route('admin.index') }}" class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 bg-gray-700 text-white">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-          </svg>
-          <span class="text-gray-200 ml-4 text-[15px]">Home</span>
+        </svg>
+        <span class="text-gray-200 ml-4 text-[15px]">Home</span>
+    </a>
+    <a href="{{ route('admin.roles.index') }}" class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 bg-gray-700 text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        <span class="text-gray-200 ml-4 text-[15px]">Roles</span>
+    </a>
+    <!-- Dropdown Staffs-->
+    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 bg-gray-700 text-white" onclick="toggleDropdownstaffs()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+        </svg>
+        <div class="flex justify-between w-full items-center">
+            <span class="text-[15px] ml-4 text-gray-200">Staffs</span>
+            <span class="text-sm rotate-180" id="arrow-staffs">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+                </svg>                                      
+            </span>
+        </div> 
     </div>
+    
+
+    <!-- Submenu -->
+    <div class="text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-200 hidden" id="submenu-staffs">
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1"><a href="/admin/staffs_list/index">All Staffs</a></h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Roles</h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Allocated Staffs</h1>
+        {{-- <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Check In</h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Check Out</h1> --}}
+    </div>
+
+    <!--- Dropdown Rooms --->
     <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 bg-gray-700 text-white" onclick="toggleDropdown1()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
@@ -53,7 +85,7 @@
 </div>
     <hr class="my-2 text-gray-600">
 
-    <!-- Dropdown -->
+    <!-- Dropdown Bookings-->
     <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 bg-gray-700 text-white" onclick="toggleDropdown()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
@@ -77,14 +109,14 @@
         {{-- <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Check In</h1>
         <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Check Out</h1> --}}
     </div>
-@auth
+    @auth
        {{-- <span class="text-blue-600 dark:text-blue-400 font-semibold">{{ Auth::user()->name }}</span> --}}
         <form action="{{ route('logout')}}" method="POST">
           @csrf 
           
           <a href="{{ route('login') }}" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
         </form>
-       @endauth
+    @endauth
 </div>
 
 
@@ -107,6 +139,12 @@
     function toggleDropdown1() {
         const submenu = document.querySelector('#submenu2');
         const arrow_two = document.querySelector('#arrow-two')
+        submenu.classList.toggle('hidden');
+        arrow_two.classList.toggle('rotate-180');
+    }
+    function toggleDropdownstaffs() {
+        const submenu = document.querySelector('#submenu-staffs');
+        const arrow_two = document.querySelector('#arrow-staffs')
         submenu.classList.toggle('hidden');
         arrow_two.classList.toggle('rotate-180');
     }
