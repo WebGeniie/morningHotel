@@ -34,7 +34,7 @@ class AdminRoomController extends Controller
             
     
             Room::create([
-                'name' =>$request->name,
+                'name' => $request->name,
                 'thumbnail' => $imageName,
                 'size' => $request->size, 
                 'capacity' => $request->capacity, 

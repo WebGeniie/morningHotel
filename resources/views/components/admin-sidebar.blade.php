@@ -57,8 +57,8 @@
     <!-- Submenu -->
     <div class="text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-200 hidden" id="submenu-staffs">
         <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1"><a href="/admin/staffs_list/index">All Staffs</a></h1>
-        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Roles</h1>
-        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Allocated Staffs</h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Unregistered Staffs</h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Registered Staffs</h1>
         {{-- <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Check In</h1>
         <h1 class="cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">Pending Check Out</h1> --}}
     </div>

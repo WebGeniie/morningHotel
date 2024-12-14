@@ -44,6 +44,11 @@ Route::middleware('admin')->group(function(){
     
     // RolesController
     Route::get('/admin/roles/index', [AdminRolesController::class, 'index'])->name('admin.roles.index');
+    Route::get('/admin/roles/create', [AdminRolesController::class, 'create'])->name('admin.roles.create');
+    Route::post('/admin/roles/store', [AdminRolesController::class, 'store'])->name('admin.roles.store');
+    Route::get('/admin/roles/{role}/edit', [AdminRolesController::class, 'edit'])->name('admin.roles.edit');
+    Route::put('/admin/roles/{role}/update', [AdminRolesController::class, 'update'])->name('admin.roles.update');
+    Route::delete('/admin/roles/{role}/delete', [AdminRolesController::class, 'destroy'])->name('admin.roles.destroy');
 
     // Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
